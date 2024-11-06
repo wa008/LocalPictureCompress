@@ -1,0 +1,21 @@
+body { /* ... existing styles */ }
+
+#imageContainer {
+  display: flex; 
+  flex-direction: column; /* Arrange elements vertically */
+  align-items: center;    /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  margin-top: 20px;
+}
+
+.inputButtonContainer{
+  display: flex;
+  gap: 20px; /* Add space between buttons */ 
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+} 
+
+button {
+  /* ... existing button styles */
+}
