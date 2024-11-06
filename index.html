@@ -1,53 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Local Picture Compress</title>
+  <title>Local Picture Compress</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div style="text-align: center;">
-      <h1>Local Picture Compress</h1>
-      <p style="font-size: 24px;">Totally local and private, works offline, and runs on GitHub Pages.</p>
-      <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)" style="font-size: 15px; padding: 10px;">
-      <button onclick="resetValues()">Reset</button>
-      <br>
-      <div>
-        <label for="sizeSlider">Size:</label>
-        <input type="range" id="sizeSlider" min="0" max="100" value="50" style="width: 300px;" oninput="document.getElementById('sizeValue').innerText = this.value + '%'">
-        <span id="sizeValue">50%</span>
-      </div>
-
-      <br>
-      <div>
-        <label for="widthSlider">Width:</label>
-        <input type="range" id="widthSlider" min="1" max="100" value="50" style="width: 300px;" oninput="document.getElementById('widthValue').innerText = this.value + '%'">
-        <span id="widthValue">50%</span>
-      </div>
-      <br>
-      <div>
-        <label for="heightSlider">Height:</label>
-        <input type="range" id="heightSlider" min="1" max="100" value="50" style="width: 300px;" oninput="document.getElementById('heightValue').innerText = this.value + '%'">
-        <span id="heightValue">50%</span>
-      </div>
-      <div id="imageContainer">
-        <div style="display: flex; gap: 20px;">
-          <div id="original-image" style="display: flex; flex-direction: column; align-items: center;">
-        <h2>Original Image</h2>
-        <div id="originalProperties" style="text-align: center;"></div>
-        <img id="originalImg" src="" alt="Original Image" style="display: none;" width="500">
-        <br>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-        <h2>Compressed Image</h2>
-        <div id="compressedProperties" style="text-align: center;"></div>
-        <img id="compressedImg" src="" alt="Compressed Image" style="display: none;" width="500">
-        <br>
-        <button onclick="downloadImage()">Download Compressed Image</button>
-          </div>
+    <h1>Local Picture Compress</h1>
+    <p style="font-size: 24px;">Totally local and private, works offline, and runs on GitHub Pages.</p>
+    <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)" style="font-size: 15px; padding: 10px;">
+    <button onclick="resetValues()">Reset</button>
+    <br>
+    <div>
+      <label for="sizeSlider">Size:</label>
+      <input type="range" id="sizeSlider" min="0" max="100" value="50" style="width: 300px;" oninput="document.getElementById('sizeValue').innerText = this.value + '%'">
+      <span id="sizeValue">50%</span>
+    </div>
+    <br>
+    <div>
+      <label for="widthSlider">Width:</label>
+      <input type="range" id="widthSlider" min="1" max="100" value="50" style="width: 300px;" oninput="document.getElementById('widthValue').innerText = this.value + '%'">
+      <span id="widthValue">50%</span>
+    </div>
+    <br>
+    <div>
+      <label for="heightSlider">Height:</label>
+      <input type="range" id="heightSlider" min="1" max="100" value="50" style="width: 300px;" oninput="document.getElementById('heightValue').innerText = this.value + '%'">
+      <span id="heightValue">50%</span>
+    </div>
+    <div id="imageContainer">
+      <div style="display: flex; gap: 20px;">
+        <div id="original-image" style="display: flex; flex-direction: column; align-items: center;">
+          <h2>Original Image</h2>
+          <div id="originalProperties" style="text-align: center;"></div>
+          <img id="originalImg" src="" alt="Original Image" style="display: none;" width="500">
+          <br>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <h2>Compressed Image</h2>
+          <div id="compressedProperties" style="text-align: center;"></div>
+          <img id="compressedImg" src="" alt="Compressed Image" style="display: none;" width="500">
+          <br>
+          <button onclick="downloadImage()">Download Compressed Image</button>
         </div>
       </div>
-
+    </div>
   <script src="script.js"></script>
 </body>
 </html>
